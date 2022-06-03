@@ -11,7 +11,7 @@ const setProductionBranch = async (netlifyClient, siteId, branch) => {
     },
   });
 
-  if (site.build_settings.repo_branch == branch) {
+  if (site.build_settings.repo_branch === branch) {
     core.info(`The branch has been updated to '${branch}'.`);
   } else {
     core.setFailed("The branch hasn't been updated.");
