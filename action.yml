@@ -1,0 +1,18 @@
+name: Netlify Production Branch
+description: Update a site's production branch on Netlify
+branding:
+  icon: copy
+  color: yellow
+inputs:
+  netlifyToken:
+    description: Netlify personal API token
+    required: true
+  siteId:
+    description: Netlify site ID
+    required: true
+  branch:
+    description: New production branch
+    required: true
+runs:
+  using: "node16"
+  main: "index.js"
